@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,
+             initial-scale=1.0,
+             maximum-scale=1.0,
+             user-scalable=no">
+
+  <title>Event Entry Scanner</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css">
+
+  <script
+    src="https://unpkg.com/html5-qrcode"
+    type="text/javascript">
+  </script>
+
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+      <div class="logo">
+        EVENT ENTRY
+      </div>
+
+      <div class="subtitle">
+        QR CODE SCANNING SYSTEM
+      </div>
+
+    </header>
+
+
+    <!-- LOGIN -->
+
+    <section
+      id="loginSection"
+      class="card">
+
+      <h2>Scanner Login</h2>
+
+      <p class="muted">
+        Authorized users only
+      </p>
+
+      <input
+        id="email"
+        type="email"
+        placeholder="Email address"
+        autocomplete="username">
+
+      <input
+        id="pin"
+        type="password"
+        placeholder="PIN / Password"
+        inputmode="numeric"
+        autocomplete="current-password">
+
+      <button
+        id="loginButton"
+        onclick="login()">
+
+        LOGIN
+
+      </button>
+
+      <div
+        id="loginMessage"
+        class="message">
+      </div>
+
+    </section>
+
+
+    <!-- SCANNER -->
+
+    <section
+      id="scannerSection"
+      class="hidden">
+
+      <div class="userBar">
+
+        <span>
+          Logged in:
+          <strong id="userName"></strong>
+        </span>
+
+        <button
+          class="logout"
+          onclick="logout()">
+
+          LOGOUT
+
+        </button>
+
+      </div>
+
+
+      <div class="scannerCard">
+
+        <div
+          id="reader">
+        </div>
+
+        <p class="scanInstruction">
+          Place the QR code inside the frame
+        </p>
+
+      </div>
+
+
+      <!-- RESULT -->
+
+      <div
+        id="resultCard"
+        class="resultCard hidden">
+
+        <div
+          id="resultTitle"
+          class="resultTitle">
+        </div>
+
+        <div
+          id="resultIcon"
+          class="resultIcon">
+        </div>
+
+        <div
+          id="personName"
+          class="personName">
+        </div>
+
+        <div
+          id="personDetails"
+          class="personDetails">
+        </div>
+
+        <div class="scanInfo">
+
+          <div>
+            <span>Scan No.</span>
+            <strong id="scanNumber"></strong>
+          </div>
+
+          <div>
+            <span>Time</span>
+            <strong id="scanTime"></strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <script
+    src="app.js">
+  </script>
+
+</body>
+
+</html>
