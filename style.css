@@ -1,1 +1,410 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      #07111f,
+      #102b46
+    );
+
+  color: #ffffff;
+}
+
+
+.app {
+
+  width: 100%;
+
+  max-width: 520px;
+
+  margin: auto;
+
+  min-height: 100vh;
+
+  padding-bottom: 30px;
+}
+
+
+/* HEADER */
+
+.header {
+
+  text-align: center;
+
+  padding:
+    30px
+    20px
+    20px;
+}
+
+.logo {
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.subtitle {
+
+  margin-top: 6px;
+
+  font-size: 12px;
+
+  opacity: 0.7;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* CARD */
+
+.card {
+
+  margin: 15px;
+
+  padding: 25px;
+
+  background:
+    rgba(255,255,255,0.10);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.15);
+
+  border-radius: 20px;
+
+  backdrop-filter:
+    blur(10px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,0.25);
+}
+
+
+.card h2 {
+
+  margin-top: 0;
+
+  text-align: center;
+}
+
+
+.muted {
+
+  text-align: center;
+
+  opacity: 0.65;
+
+  font-size: 14px;
+
+  margin-bottom: 25px;
+}
+
+
+/* INPUTS */
+
+input {
+
+  width: 100%;
+
+  padding: 16px;
+
+  margin-bottom: 14px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,0.95);
+
+  color: #111;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+
+/* BUTTON */
+
+button {
+
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    #19c37d;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+button:active {
+
+  transform: scale(0.98);
+}
+
+
+/* USER BAR */
+
+.userBar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 10px 15px;
+
+  font-size: 13px;
+}
+
+.logout {
+
+  width: auto;
+
+  padding:
+    8px
+    14px;
+
+  font-size: 12px;
+
+  background:
+    #e55353;
+}
+
+
+/* SCANNER */
+
+.scannerCard {
+
+  margin: 15px;
+
+  padding: 15px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  color: #111;
+}
+
+#reader {
+
+  width: 100%;
+}
+
+.scanInstruction {
+
+  text-align: center;
+
+  margin:
+    12px
+    0
+    0;
+
+  font-size: 13px;
+
+  color: #555;
+}
+
+
+/* RESULT */
+
+.resultCard {
+
+  margin: 15px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  background:
+    rgba(255,255,255,0.12);
+
+  border:
+    2px solid
+    rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,0.25);
+}
+
+
+.resultTitle {
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+
+.resultIcon {
+
+  font-size: 48px;
+
+  margin-bottom: 10px;
+}
+
+
+.personName {
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+
+.personDetails {
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  opacity: 0.9;
+}
+
+
+.scanInfo {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+
+.scanInfo div {
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(0,0,0,0.20);
+}
+
+
+.scanInfo span {
+
+  display: block;
+
+  font-size: 11px;
+
+  opacity: 0.7;
+
+  margin-bottom: 5px;
+}
+
+
+.scanInfo strong {
+
+  display: block;
+
+  font-size: 14px;
+}
+
+
+/* STATES */
+
+.green {
+
+  border-color:
+    #19c37d;
+
+  background:
+    rgba(25,195,125,0.15);
+}
+
+
+.yellow {
+
+  border-color:
+    #f5c542;
+
+  background:
+    rgba(245,197,66,0.15);
+}
+
+
+.red {
+
+  border-color:
+    #ff5c5c;
+
+  background:
+    rgba(255,92,92,0.15);
+}
+
+
+.message {
+
+  margin-top: 15px;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+.hidden {
+
+  display: none !important;
+}
+
+
+@media
+(max-width: 400px) {
+
+  .logo {
+
+    font-size: 23px;
+  }
+
+  .personName {
+
+    font-size: 20px;
+  }
+}
