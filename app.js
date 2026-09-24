@@ -3,7 +3,7 @@
  *******************************************************/
 
 const API_URL =
-  "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+  "https://script.google.com/macros/s/AKfycbwEEXOBGRJ6hPVDnjruTLqEN-xVJGjDMsQQtJtFVr8zAaqofvr-Yn_GbPqf7PVS9Tmk/exec";
 
 
 let sessionToken =
